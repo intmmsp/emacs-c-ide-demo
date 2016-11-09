@@ -63,8 +63,9 @@
 ;; function-args
 ;; (require 'function-args)
 (fa-config-default)
-(define-key c-mode-map  [(tab)] 'company-complete)
-(define-key c++-mode-map  [(tab)] 'company-complete)
+;; Too early to add these two lines, see next few lines
+;; (define-key c-mode-map  [(tab)] 'company-complete)
+;; (define-key c++-mode-map  [(tab)] 'company-complete)
 
 ;; company
 (require 'company)
@@ -192,9 +193,13 @@
   (let ((shell-name (read-string "shell name: " nil)))
     (shell (concat "*" shell-name "*"))))
 
+;; Add line number
+;;(add-hook 'nlinum-mode)
+;; Enable linum mode by default
+(global-linum-mode t)
 ;; Separate line number from text
-(setq linum-format "%d ")
+;; (setq linum-format "%d ")
 
 ;; Set the font, remember to put the double quote
 ;; Reference: https://www.emacswiki.org/emacs/SetFonts
-(set-face-attribute 'default nil :font "MONACO-14" ))
+(set-face-attribute 'default nil :font "MONACO-14" )
