@@ -203,3 +203,6 @@
 ;; Set the font, remember to put the double quote
 ;; Reference: https://www.emacswiki.org/emacs/SetFonts
 (set-face-attribute 'default nil :font "MONACO-14" )
+
+;; Disable scroll bar
+(scroll-bar-mode -1)
