@@ -206,3 +206,16 @@
 
 ;; Disable scroll bar
 (scroll-bar-mode -1)
+
+
+;; Add scroll without moving cursor
+(defun gcm-scroll-down ()
+  (interactive)
+  (scroll-up 1))
+
+(defun gcm-scroll-up ()
+  (interactive)
+  (scroll-down 1))
+
+(global-set-key [(control j)] 'gcm-scroll-down)
+(global-set-key [(control k)]   'gcm-scroll-up)
